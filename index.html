@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" 
+    href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    >
+    <title>To do List</title>
+</head>
+<body>
+    <div class="header-top">
+        <div class="button-container">
+            <button onclick="myFunction()">
+            <img src="./assets/img/dark.png" 
+            alt="" id="myImage">
+            </button>
+        </div>
+        <div id="header-light" class="header header-light">
+            <h2>Lista de Tarefas</h2>
+            <input type="text" id="myInput" placeholder="Título..." maxlength="70">
+            <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+        <div class="body-list">
+            <ul id="myUL" class="ul-light">
+            </ul>
+        </div>
+    </div>
+
+   <script src="./assets/js/index.js"></script> 
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>
