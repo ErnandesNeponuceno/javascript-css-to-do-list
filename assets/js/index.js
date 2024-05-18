@@ -52,27 +52,25 @@ function newElement() {
 
  // adiciona o dark mode
 function myFunction() {
-    let element = document.body;
-    let imgElement = document.getElementById('myImage');
-    let headElement = document.getElementById("header-light");
-    let lisElement = document.getElementById("myUL");
+    chanceClasses();
 
-    if (element.className === "") {
-        element.classList.add("dark-mode");
-        imgElement.src = "./assets/img/moon.png";
-        headElement.classList.remove("header-light");
-        headElement.classList.add("header-dark");
-
-        lisElement.classList.remove("ul-light");
-        lisElement.classList.add("ul-dark");
+    if (body.className === "") {
+      btnImgMoon.src = "./assets/img/dark.png";
     } else {
-        element.classList.remove("dark-mode");
-        imgElement.src = "./assets/img/dark.png";
-        headElement.classList.remove("header-dark");
-        headElement.classList.add("header-light");
-
-        lisElement.classList.remove("ul-dark");
-        lisElement.classList.add("ul-light");
+      btnImgMoon.src = "./assets/img/moon.png";
     }
 }
 
+function chanceClasses(){
+  body.classList.toggle('dark-mode');
+  headElement.classList.toggle("header-dark");
+  lisElement.classList.toggle("ul-dark")
+}
+
+const body = document.getElementsByTagName('body')[0];
+const btnImgMoon = document.getElementById('myImage');
+const headElement = document.getElementById("header-light");
+const lisElement = document.getElementById("myUL");
+const button = document.getElementById('btn-change');
+
+button.addEventListener('click', myFunction)
